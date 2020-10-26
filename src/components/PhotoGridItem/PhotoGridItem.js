@@ -10,6 +10,18 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     top: 0
   },
+  itemImg: {
+    width: '100%',
+    display: 'block',
+  },
+  photoItem: {
+    width: '100%',
+    marginBottom: theme.spacing(1),
+    cursor: 'pointer',
+    overflow: 'hidden',
+    position: 'relative',
+    backgroundColor: '#7AB3EF',
+  },
   transparent: {
     backgroundColor: 'transparent'
   },
@@ -25,9 +37,9 @@ const PhotoGridItem = (props) => {
   }
 
   return (
-    <div className="photo-item">
+    <div className={classes.photoItem}>
       <img 
-        className="item-img" 
+        className={classes.itemImg} 
         src={details.urls.regular} 
         alt={details.alt_description} 
         onLoad={() => showImage(true)} />
