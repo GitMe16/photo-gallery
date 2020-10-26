@@ -17,7 +17,7 @@ const PhotoColumn = (props) => {
   const classes = useStyles();
 
   return (
-    <div className="photo-column" className={classes.root}>
+    <div className={classes.root}>
       {
         photos.length > 0 ? 
         photos.map((each, index) => 
